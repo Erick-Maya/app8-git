@@ -13,17 +13,17 @@ function onDeviceReady(){
 }
 
 function getPosition(){
-	var options ={
-		enableHighAccuracy :true,
+	var options={
+		enableHighAccuracy:true,
 		maximumAge: 3600000
 	}
 	
-	var watchID = navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+	var watchID=navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
 	
 	function onSuccess(position){
 		
 		alert('Latitude:'   + position.coords.latitude     +'\n'+
-		'Longitude: '       + position.coords.longitude     +'\n');
+		'Longitude:'       + position.coords.longitude     +'\n');
 	};
 	
 	function onError(error){
